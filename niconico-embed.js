@@ -1,5 +1,6 @@
-// script.js
+// niconico-embed.js
 $('.niconico').click(function() {
-    var video = '<iframe src="' + $(this).attr('data-video') + '" frameborder="0" width="800" height="480" allowfullscreen></iframe>';
-    $(this).replaceWith(video);
+    var videoURL = $(this).attr('data-video');
+    var iframe = '<iframe src="' + videoURL + '" width="800" height="480" frameborder="0" allowfullscreen></iframe>';
+    $(this).html(iframe); // サムネイルをiframeに置き換える
 });
